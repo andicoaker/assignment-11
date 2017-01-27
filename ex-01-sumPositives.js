@@ -7,22 +7,31 @@
  *
 */
 // INPUT: array of numbers
+// OUTPUT: array of only positive numbers - filtered set
+// if num is positve, then add to
+
 
 var sumPositives = function(numArr){
-  
-  var onlyPosNumArray = [ ]
+
+  var PosNum = [ ]
 
   for(var i = 0; i < numArr.length; i++){
+    console.log(numArr[i]);
 
-     if( numArr[i].toLowerCase() !== 'x' ){
-        newString = newString + str[i]
+    if (numArr[i] > 0) {
+       PosNum.push(numArr[i]);
+       console.log(PosNum);
      }
+  // }
+  // var sumOfPosNum = 0
+  // for(var i = 0; i<posNum.length; i++){
+  //    total += posNum[i];
+  //    console.log(posNum [i]);
   }
-  return newString
-  //OUTPUT: shorter string
+
+  // return sumOfPosNum
 }
 
-// OUTPUT: array of only positive numbers - filtered set
 
 
 console.assert(sumPositives([3, -1, 4, 5, -3, -4]) === 12);
