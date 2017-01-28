@@ -8,7 +8,36 @@
  * - for every number that is a multiple of 3 and 5, return "FizZBuzZ"
  */
 
+ // INPUT: number
+ // OUTPUT: string - transform
+ // LOGIC: take number and transform into a string of numbers (1 thru that number), then loop through the string of numbers and apply series of if/if else statements.
 
+var fizzbuzz = function(num){
+  var fizzStr = ' '
+    console.log(fizzStr);
+
+
+
+    if (num !== num * 3 || num * 5) {
+      fizzStr = '.';
+      console.log(fizzStr);
+    }
+    else if ( (num === num * 3) && (num !== num * 5 ) ) {
+      fizzStr = 'fizz';
+      console.log(fizzStr);
+    }
+    else if ( (num === num * 5) && (num !== num * 3) ) {
+      fizzStr = 'buzz';
+      console.log(fizzStr);
+    }
+    else if (num !== num * 3 && num * 5) {
+      fizzStr = 'FizzBuzz';
+      console.log(fizzStr);
+    }
+
+
+  return fizzStr
+}
 
 console.assert(fizzbuzz(1) === ".")
 console.assert(fizzbuzz(2) === "..")
