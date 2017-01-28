@@ -6,20 +6,20 @@
 
 // INPUT: array of numbers
 // OUTPUT: highest number
-// LOGIC: if index position is greater than next index position, return that index
+// LOGIC: iterate over each index to see if it's greater than zero variable, return the greater number
 
 var maxOfArray = function (arrOfNum){
   var highestNum = 0
+    // console.log(highestNum);
 
   for (var i = 0; i < arrOfNum.length; i++) {
-    console.log(arrOfNum[i]);
+    // console.log(arrOfNum[i]);
 
-    if (arrOfNum[i] > arrOfNum[i + 1] ) {
-      console.log( arrOfNum[i] > arrOfNum[i + 1] );
+    if (arrOfNum[i] > highestNum ) {
+      // console.log( arrOfNum[i] > highestNum );
+      highestNum = arrOfNum[i];
 
-      highestNum = arrOfNum[i + 1];
     }
-
   }
   return highestNum
 }
