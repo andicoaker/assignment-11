@@ -13,30 +13,30 @@
  // LOGIC: take number and transform into a string of numbers (1 thru that number), then loop through the string of numbers and apply series of if/if else statements.
 
 var fizzbuzz = function(num){
-  var fizzStr = ' '
+  var fizzStr = '';
     console.log(fizzStr);
 
+    for (var i = 1; i <= num; i++) {
 
 
-    if (num !== num * 3 || num * 5) {
-      fizzStr = '.';
-      console.log(fizzStr);
-    }
-    else if ( (num === num * 3) && (num !== num * 5 ) ) {
-      fizzStr = 'fizz';
-      console.log(fizzStr);
-    }
-    else if ( (num === num * 5) && (num !== num * 3) ) {
-      fizzStr = 'buzz';
-      console.log(fizzStr);
-    }
-    else if (num !== num * 3 && num * 5) {
-      fizzStr = 'FizzBuzz';
-      console.log(fizzStr);
-    }
-
-
-  return fizzStr
+      if ( (i % 3 !== 0) && (i % 5 !== 0) ) {
+        fizzStr = fizzStr + '.';
+        console.log(fizzStr);
+      }
+      else if ( (i % 3 === 0) && (i % 5 !== 0) ) {
+        fizzStr = fizzStr + 'fizz';
+        console.log(fizzStr);
+      }
+      else if ( (i % 5 === 0) && (i % 3 !== 0) ) {
+        fizzStr = fizzStr + 'buzz';
+        console.log(fizzStr);
+      }
+      else ( (i % 3 === 0) && (i % 5 === 0) ){
+        fizzStr = fizzStr + 'FizZBuzZ';
+        console.log(fizzStr);
+      }
+  }    
+  return fizzStr;
 }
 
 console.assert(fizzbuzz(1) === ".")
