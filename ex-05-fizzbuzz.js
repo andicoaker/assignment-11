@@ -17,13 +17,9 @@ var fizzbuzz = function(num){
     console.log(fizzStr);
 
     for (var i = 1; i <= num; i++) {
+      console.log(num[i]);
 
-
-      if ( (i % 3 !== 0) && (i % 5 !== 0) ) {
-        fizzStr = fizzStr + '.';
-        console.log(fizzStr);
-      }
-      else if ( (i % 3 === 0) && (i % 5 !== 0) ) {
+      if ( (i % 3 === 0) && (i % 5 !== 0) ) {
         fizzStr = fizzStr + 'fizz';
         console.log(fizzStr);
       }
@@ -31,11 +27,15 @@ var fizzbuzz = function(num){
         fizzStr = fizzStr + 'buzz';
         console.log(fizzStr);
       }
-      else ( (i % 3 === 0) && (i % 5 === 0) ){
+      else if ( (i % 3 === 0) && (i % 5 === 0) ) {
         fizzStr = fizzStr + 'FizZBuzZ';
         console.log(fizzStr);
       }
-  }    
+      else {
+          fizzStr = fizzStr + '.';
+          console.log(fizzStr);
+      }
+  }
   return fizzStr;
 }
 
